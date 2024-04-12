@@ -1,0 +1,34 @@
+Last login: Fri Apr 12 12:29:11 on ttys003
+(base) jolandamalamud@jolandas-macbook-air ~ % cd phd/papers/git/esmssm_public 
+(base) jolandamalamud@jolandas-macbook-air esmssm_public % vim .gitignore 
+
+
+
+Windows default autosave extension
+*.asv
+
+# OSX / *nix default autosave extension
+*.m~
+
+# Compiled MEX binaries (all platforms)
+*.mex*
+
+# Packaged app and toolbox files
+*.mlappinstall
+*.mltbx
+
+# Generated helpsearch folders
+helpsearch*/
+
+# Simulink code generation folders
+slprj/
+sccprj/
+
+# Matlab code generation folders
+codegen/
+
+".gitignore" 37L, 488B
+
+# data folder
+data/*
+

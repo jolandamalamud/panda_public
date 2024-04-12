@@ -1,0 +1,16 @@
+firstpc_gng = dim_reduction_3d(gng_parameter_included, 3);
+
+gng_baseline = [sq(gng_parameter_included(:,:,1))', ...
+    sq(firstpc_gng(:,:,1))', ...
+    sq(gng_pcorr(:,:,1))', nanmean(gng_pcorr(:,:,1),1)', rts2(:,1)];
+
+T = array2table(gng_baseline);
+ 
+vap = VisualAnalysisPANDA;
+T.Properties.VariableNames = [vap.parameter_label, '1PC_parameter', ...
+    '2PC_parameter', '3PC_parameter', vap.task_condition_labels, ...
+    'overall_pcorr', 'mean_rt'];
+
+filepath = '~/phd/projects/gng_panda_antler/gng_panda/data/';
+writetable(T,[filepath 'gng_baseline_data.csv'],'Delimiter',',', ...
+    'QuoteStrings',true);
